@@ -1,6 +1,11 @@
 tr, td, th, table {
     border: 1px solid black;
-    border-collapse: collapse;
+    border-spacing: 0px;
+    border-radius: 15px;
+}
+
+tr:nth-child(odd){
+    background-color: lightgray;
 }
 
 
@@ -21,4 +26,6 @@ tr td {
 
 .color td{
     border: 1px dashed tomato ;
+    
 }
+

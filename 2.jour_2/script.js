@@ -61,4 +61,46 @@ function decrementation(){
 
 }
 
-setInterval(decrementation, 2000)
+//setInterval(decrementation, 2000)
+
+//Array = tableau
+//type de varibale qui est elle même un tableau 
+
+var tab = [10, "bonjour", 7.5, null]
+
+/* cette variable est un tableau qui contient 4 valeurs dans l'ordre
+10
+Bonjour
+7.5
+Null
+*/
+
+console.log(tab[1]) // affiche bonjour
+console.log(tab[3]) // affiche Null
+
+/*  je voudrai crée un tableau qui ce nomme chmilblik qui comporte 5 valeur de type sting et 5valeur de type int ou float*/
+
+var chmilblick = ["age" , 36, "poids", 76.5, "jour" , 19, "Mois", 12, "année", 1986 ]
+
+console.log(chmilblick) 
+console.log(chmilblick.length) // pour afficher le nombre de valeur du tableau
+
+//document.getElementById('animal').innerHTML = "autruche"  
+//sert a changer du text HTML soit HTML = Animal mais avec JS on a changer pour Autruche
+
+
+/* getElementByID selectionne un élement qui a l'id defini sur animal dans ce cas addEvenLisstener créer une écoute d'évenement */
+
+document.getElementById('animal').addEventListener('click', function() {
+    document.getElementById('animal').innerHTML = "Autruche"
+})
+
+let Animal = "Chien"
+let temp =""
+document.getElementById('Animal').addEventListener('click', function() {
+    // Je regarde le texte qui ce trouve dans cet élement
+    temp = document.getElementById('Animal').innerHTML
+    // je modifie le texte qui ce trouve dans cet élement par la valaur de la variable animal
+    document.getElementById("Animal").innerHTML = Animal
+    Animal = temp
+})
