@@ -1,3 +1,23 @@
+tr, td, th, table {
+    border: 1px solid black;
+    border-collapse: collapse;
+}
+
+
+
+tr td {
+    text-align: center;
+}
+
+.color, .color td, .color th{
+    border: 2px solid green;
+    border-radius: 10px;
+    width: 50vh;
+}
+
+.color th{
+    font-size: 1.5em;
+}
 
 .color td{
     border: 1px dashed tomato ;
