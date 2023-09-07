@@ -1,3 +1,5 @@
+
+/* Tableau */
 tr, td, th, table {
     border: 1px solid black;
     border-spacing: 0px;
@@ -28,4 +30,36 @@ tr td {
     border: 1px dashed tomato ;
     
 }
+
+/* Formailiare */
+
+#message{
+    resize: none;
+}
+
+input::placeholder{
+    font-weight: 100;
+}
+
+.button{
+    transition: .3;
+    border-radius: 20%;
+    margin:15px 5px 0 0 ;
+}
+
+.button:hover{
+    cursor: pointer;
+    font-size: 1.3em;
+}
+
+fieldset{
+    width: 50vh;
+    background-color: rgb(240, 240, 240);
+}
+
+form{
+    text-align: center;
+}
+
+
 
