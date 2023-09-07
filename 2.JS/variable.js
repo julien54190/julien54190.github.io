@@ -64,6 +64,7 @@ function decrementation(){
 //setInterval(decrementation, 2000)
 
 //Array = tableau
+//tableau indexer
 //type de varibale qui est elle même un tableau 
 
 var tab = [10, "bonjour", 7.5, null]
@@ -104,3 +105,28 @@ document.getElementById('Animal').addEventListener('click', function() {
     document.getElementById("Animal").innerHTML = Animal
     Animal = temp
 })
+
+/***********  Boucle   *************/
+
+// La boucle tourne jusqu'a la taille du tableau
+for(var i = 0; i < chmilblick.length; i++){
+    console.log(chmilblick[i])
+    if (i == 3){
+        break
+    }
+}
+
+for (index in chmilblick){
+    console.log(index)
+    //va aficher les index du tableau
+}
+
+/***********  Tableau 2   *************/
+
+// tableau Associatif
+
+var tab_assoc = {"ami" : "chien", "cafe": "caféine"}
+
+for (index in tab_assoc){
+    console.log(index)
+}
