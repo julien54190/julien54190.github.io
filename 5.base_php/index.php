@@ -1,4 +1,6 @@
 <!-- http://localhost:8888//1.base_php/index.php -->
+<?php require_once('db.php');
+?> 
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -204,7 +206,7 @@
     }
     
     ?>
-    <form action="" method="post">
+    <form action="validation.php" method="post">
         <pre>
             <h1 class="title">Register</h1>
         <label for="name">First name :</label><br>
@@ -228,17 +230,63 @@
         <input type="submit" value="Submit" class="button">
     </form>
 
-    <?php 
-    // si la methode post est rentrer dans le formulaire il faut utiliser $_POST
-    // Sinon si la method get est rentrer dans le formulaire il faut utliser $_GET
-    //la fonction isset sert a regarder si la derniere variable qui lui est doner est bien defini
+<?php
+            // je prepare ma commande
+        $select = $bdd ->prepare('SELECT * FROM cours.utilisateur WHERE gender=?;');
+        // je l'excute en lui donnant une valeur a la place des ?
+        $select ->execute(array("male"));
+        // je récupere tout ce que renvoie ma commande
+        $total = $select ->fetchAll(PDO::FETCH_ASSOC);
+
+        // je l'affiche
+        echo '<pre>';
+        var_dump($total);
+        echo '</pre>';
+
+        echo $total[2]['gender'];
+    ?>
+    <br><br><br><br><br><br><br><br><br><br><br>
+    <pre>
+    <form action="" method="post">
+    <label for="name">Your name</label><br>
+    <input type="text" name="name" id="name"><br>
+    <label for="email">Your mail</label>
+    <input type="email" name="email" id="email"><br>
+    <label for="message">Your message</label><br>
+    <textarea name="message" id="message" cols="30" rows="10"></textarea><br>
+    <label for="num">Give me a number</label><br>
+    <input type="tel" name="num" id="num"><br>
+    <input type="submit" value="Envoyer">
+    </pre>
+    </form>
+
+
+
+    <?php
     if (isset($_POST) && !empty($_POST)) {
+        settype($_POST['num'], 'integer');
         echo '<pre>'; var_dump($_POST); echo '</pre>';
         echo $_POST['name'];
-        echo sha1($_POST['password']);
-        echo md5($_POST['password']);
-        //sha1 est la commande pour hacher le mot de passe sois le cripter sha1 = md5
+        $insert = $bdd -> prepare ('INSERT INTO cours.exercice(firstname2, email2, message, num) value (?, ?, ?, ? )');
+        $insert -> execute(array(
+            $_POST['name'],
+            $_POST['email'],
+            $_POST['message'],
+            $_POST['num'],
+        ));
+
     }
+    $select = $bdd -> prepare('SELECT * FROM cours.exercice');
+    $total = $select ->fetchAll(PDO::FETCH_ASSOC);
+
+    echo '<pre>';
+    var_dump($total);
+    echo '</pre>';
+
+
     ?>
+
+
+
 </body>
 </html> 
