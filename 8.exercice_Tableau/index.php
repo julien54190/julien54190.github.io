@@ -16,12 +16,11 @@
         <tr>
             <th></th>
             <th>Pays</th>
-            <div class="medaille">
             <th><img src="img/or.png" alt=""></th>
             <th><img src="img/argent.png" alt=""></th>
             <th><img src="img/bronze.png" alt=""></th>
             <th><img src="img/total2.png" alt=""></th>
-            </div>
+            
         </tr>
         <tr>
             <td>1</td>
@@ -82,7 +81,7 @@
         </tbody>
         <tfoot>
         <tr>
-            <th colspan="6">Ce classment est limité aux 7 première nations</th>
+            <th colspan="6">Ce classment est limité aux 7 premières nations</th>
         </tr>
         </tfoot>
 

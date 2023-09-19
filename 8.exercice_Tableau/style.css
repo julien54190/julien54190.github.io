@@ -5,12 +5,11 @@ table, th, td{
 
 table{
     width: 70%;
-
+    font-family: 'Courier New', Courier, monospace;
 }
 
-
 thead th, tfoot th{
-    background-color: green;
+    background-color: #005500;
     color: white;
     font-size: 2em;
     padding: 5px 0 5px 0;
@@ -19,9 +18,6 @@ thead th, tfoot th{
 *{
     text-align: center;
 }
-
-
-
 
 
 td img, td span{
@@ -33,15 +29,13 @@ td img{
     padding-right: 10px;
 }
 
-
-
 td:nth-child(2){
     text-align: left;
 }
 
 td:first-child, tbody tr th{
     background-color: black;
-    color: #FFF;
+    color: #FCFEFE;
     font-size: 1.3em;
     font-weight: 600;
     padding: 5px 0 5px 0;
@@ -51,15 +45,13 @@ td:first-child, tbody tr th{
 .hover{
     background-color: rgb(246, 224, 75);
     padding: 0 4px ;
-}
-
-.hover:hover{
-    color: blue;
+    font-weight: 700;
 }
 
 tr:hover .hover,tr:hover{
     background-color: gray;
     color: #FFF;
+    font-weight: 700;
 }
 
 tr:hover .hover{
@@ -69,6 +61,8 @@ tr:hover .hover{
 td:first-child{
     padding: 15px 7px 15px 7px;
 }
+
+
 
 
 
