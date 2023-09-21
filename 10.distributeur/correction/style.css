@@ -78,4 +78,19 @@ div.num:hover, button.num:hover {
 
 #invisible{
     display: none;
+<<<<<<< HEAD
 }
+
+/* Formulaire */
+
+:required:valid{
+    border: 1px solid green;
+}
+
+:required:invalid{
+    border: 1px solid red;
+}
+
+=======
+}
+>>>>>>> fefed5cb50d5b916751e04478c37b507bf45ff81
